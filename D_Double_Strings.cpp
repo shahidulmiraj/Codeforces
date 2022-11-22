@@ -24,27 +24,27 @@ void solve()
 	ll n;
     cin >> n;
     vector<string> v(n);
-    unordered_set<string> s;
+    map<string,bool>m;
 
     for(ll i=0; i<n; i++){
         cin >> v[i];
+        m[v[i]]=1;
     }
-    for(ll i=0; i<n; i++){
-        for(ll j=0; j<n; j++){
-            s.insert(v[i]+v[j]);
-            s.insert(v[j]+v[i]);
+    for(auto it:v){
+        ll sz=it.size();
+        bool ok=0;
+        for(ll i=0; i<sz; i++){
+            string f=it.substr(0,i);
+            string s=it.substr(i,sz-i);
+            if(m[f] && m[s]){
+                cout << 1;
+                ok=1;
+                break;
+            }
         }
+        if(!ok) cout << 0;
     }
-    
-    for(ll i=0; i<n; i++){
-        unordered_set<string> :: iterator it;
-        it=s.find(v[i]);
-        if(it!=s.end()){
-            cout << 1;
-        }
-        else cout << 0;
-    }
-    cout << nl;
+    cout << endl;
 }
 
 int main()
