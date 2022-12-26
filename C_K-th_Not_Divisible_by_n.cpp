@@ -1,4 +1,6 @@
-  #include<bits/stdc++.h>
+// https://codeforces.com\problemset\problem\1352\C  
+
+#include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 #define yes 	cout<<"YES"<<nl

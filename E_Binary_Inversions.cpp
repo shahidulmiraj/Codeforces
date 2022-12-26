@@ -1,3 +1,5 @@
+// https://codeforces.com\contest\1760\problem\E
+
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;

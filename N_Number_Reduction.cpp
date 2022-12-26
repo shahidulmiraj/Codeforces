@@ -1,3 +1,5 @@
+// https://codeforces.com\contest\1765\problem\N
+
 #include<bits/stdc++.h>
 using namespace std;
 typedef long long ll;
@@ -72,7 +74,7 @@ void solve()
             vector<ll> v;
             // for(ll i=)
 
-        }  << removeKdigits(s2,n-p+1) << nl;
+        }  cout << removeKdigits(s2,n-p+1) << nl;
     }
     else if(n<p){
         cout << removeKdigits(s1,n) << s2 << nl;

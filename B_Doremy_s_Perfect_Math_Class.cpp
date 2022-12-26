@@ -22,21 +22,17 @@ void solve()
     ll n;
     cin >> n;
     vl v(n);
-    set<ll>st;
     for(ll i=0; i<n; i++){
         cin >> v[i];
-        st.insert(v[i]);
     }
-    sort(all(v));
     ll p=v[0];
     for(ll i=1; i<n; i++){
        p=__gcd(v[i],p); 
     }
 
-    for(ll i=p; i<v[n-1]; i+=p){
-        st.insert(i);
-    }
-    cout << st.size() << nl;
+   sort(all(v));
+ 
+   cout << v[n-1]/p << nl;
     
 }
 
